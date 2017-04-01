@@ -2,7 +2,7 @@ package com.github.sah4ez;
 
 import java.util.*;
 
-public class Node<T> implements Iterable
+public class Node<T> implements Iterable<Node<T>>
 {
     private Node<T> parent = null;
     private T data = null;
@@ -19,6 +19,10 @@ public class Node<T> implements Iterable
 
     public int countChildren() {
         return children.size();
+    }
+
+    public Set<Node<T>> getChildren() {
+        return children;
     }
 
     public boolean addChild(Node<T> child){
@@ -38,7 +42,7 @@ public class Node<T> implements Iterable
     }
 
     @Override
-    public Iterator iterator() {
+    public Iterator<Node<T>> iterator() {
         return children.iterator();
     }
 }

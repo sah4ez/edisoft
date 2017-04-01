@@ -13,7 +13,7 @@ public class NodeTest {
 
     @Before
     public void setUp() throws Exception {
-        node = new Node<Integer>();
+        node = new Node<Integer>(1);
     }
 
     @Test
@@ -24,9 +24,9 @@ public class NodeTest {
 
     @Test
     public void nodeHasChildAndParent() throws Exception {
-        Node<Integer> parent = new Node<Integer>();
-        Node<Integer> child1 = new Node<Integer>();
-        Node<Integer> child2 = new Node<Integer>();
+        Node<Integer> parent = new Node<Integer>(1);
+        Node<Integer> child1 = new Node<Integer>(1);
+        Node<Integer> child2 = new Node<Integer>(1);
 
         node.setParent(parent);
         node.addChild(child1);
@@ -34,6 +34,5 @@ public class NodeTest {
 
         assertNotNull(node.getParent());
         assertEquals(2, node.countChildren());
-
     }
 }
