@@ -19,7 +19,7 @@ public class UtilsListTest
 
         assertEquals(3, list.size());
 
-        list = UtilsList.removeWithOrder(list);
+        list = UtilsList.removeSequence(list);
         assertEquals(0, list.size());
     }
 
@@ -31,7 +31,7 @@ public class UtilsListTest
         list.add(2);
 
 
-        list = UtilsList.removeWithOrder(list);
+        list = UtilsList.removeSequence(list);
         assertEquals(1, list.size());
     }
 
@@ -43,7 +43,7 @@ public class UtilsListTest
         list.add(1);
 
 
-        list = UtilsList.removeWithOrder(list);
+        list = UtilsList.removeSequence(list);
         assertEquals(1, list.size());
     }
 
@@ -55,7 +55,7 @@ public class UtilsListTest
         list.add(1);
 
 
-        list = UtilsList.removeWithOrder(list);
+        list = UtilsList.removeSequence(list);
         assertEquals(4, list.size());
     }
 
@@ -75,7 +75,7 @@ public class UtilsListTest
         list.add(5);
 
 
-        list = UtilsList.removeWithOrder(list);
+        list = UtilsList.removeSequence(list);
         assertEquals(4, list.size());
     }
 

@@ -4,7 +4,7 @@ import java.util.*;
 
 public class UtilsList {
 
-    public static List<Integer> removeWithOrder(List<Integer> list) {
+    public static List<Integer> removeSequence(List<Integer> list) {
 
         List<Integer> copied = null;
         if (list instanceof ArrayList){
@@ -18,8 +18,6 @@ public class UtilsList {
 
         Integer current = list.get(0);
         Integer count = 0;
-        Integer position = 0;
-        Integer positionWrite = 0;
 
         for (Integer i : list){
             if (current == i){
