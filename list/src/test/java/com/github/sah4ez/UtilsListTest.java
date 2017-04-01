@@ -1,5 +1,6 @@
 package com.github.sah4ez;
 
+import jdk.nashorn.internal.runtime.ECMAException;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -73,9 +74,31 @@ public class UtilsListTest
         list.add(3);
         list.add(3);
         list.add(5);
+        list.add(5);
 
 
         list = UtilsList.removeSequence(list);
+        assertEquals(5, list.size());
+    }
+
+    @Test
+    public void testRemoveDuplicate() throws Exception{
+        list.add(1);
+        list.add(2);
+        list.add(1);
+        list.add(1);
+        list.add(1);
+        list.add(4);
+        list.add(3);
+        list.add(3);
+        list.add(3);
+        list.add(3);
+        list.add(3);
+        list.add(5);
+        list.add(5);
+
+
+        list = UtilsList.removeDuplicate(list);
         assertEquals(4, list.size());
     }
 
