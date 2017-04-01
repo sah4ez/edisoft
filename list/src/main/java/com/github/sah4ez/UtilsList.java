@@ -34,6 +34,8 @@ public class UtilsList {
         }
         copied = trim(count, copied);
 
+        list.clear();
+
         return copied;
     }
 

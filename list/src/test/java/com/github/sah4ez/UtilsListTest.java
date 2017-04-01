@@ -46,4 +46,37 @@ public class UtilsListTest
         list = UtilsList.removeWithOrder(list);
         assertEquals(1, list.size());
     }
+
+    @Test
+    public void threeTheSameWithOneBetween() throws Exception {
+        list.add(1);
+        list.add(2);
+        list.add(1);
+        list.add(1);
+
+
+        list = UtilsList.removeWithOrder(list);
+        assertEquals(4, list.size());
+    }
+
+    @Test
+    public void twoGroupForRemoval() throws Exception {
+        list.add(1);
+        list.add(2);
+        list.add(1);
+        list.add(1);
+        list.add(1);
+        list.add(4);
+        list.add(3);
+        list.add(3);
+        list.add(3);
+        list.add(3);
+        list.add(3);
+        list.add(5);
+
+
+        list = UtilsList.removeWithOrder(list);
+        assertEquals(4, list.size());
+    }
+
 }
