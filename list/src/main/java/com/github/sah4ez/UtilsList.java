@@ -70,6 +70,7 @@ public class UtilsList {
                 iterator.remove();
             }
         }
+        countNumbers.clear();
 
         return list;
     }
